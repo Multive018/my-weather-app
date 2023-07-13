@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" class="css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+  <div class="background-container">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/457/original/black_sky.png?1689170749" alt="">
+    <div class="background"></div>
+  </div>
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-4">
+        <form class="search-bar" id="search-form">
+          <input type="search" placeholder="Enter a city" id="search" autofocus="on" autocomplete="off"/>
+          <input type="submit" value="Search" class="search-btn"/>
+          <button type="button" id="current-weather-btn">Current</button>
+        </form>
+        <div>
+          <div class="temp-value-main" id="temp-main">
+          27
+        </div>
+        <small class="degrees" id="degree-fahrenheit">
+          <a href="#" style="text-decoration: none;" id="celcius">&deg;C</a> |
+          <a href="#" style="text-decoration: none;" id="fahrenheit">&deg;F</a>
+        </small>
+        </div>
+        <small class="weather-info">
+          <div>
+            Feels like:
+            <span id="feels-like"></span>
+            <span>&deg;C</span>
+            <br>
+            Min Temp:
+            <span id="low"></span>
+            <span>&deg;C</span>
+            <br>
+            Max Temp:
+            <span id="high"></span>
+            <span>&deg;C</span>
+            <br>
+            Humidity:
+            <span id="humidity-value"></span>
+            <span>%</span>
+            <br>
+            Wind:
+            <span id="wind-value"></span>
+            <span>km/h</span>
+          </div>
+        </small>
+        <h3 id="city-name"></h3>
+        <h5>Tonight</h5>
+        <div class="emoji-main">
+          🌧
+        </div>
+        <div class="weather-info-specific">
+          <p>
+            <div>Mostly Clear with Light Rain Showers with a low around 72°F [22°C].</div>
+            <div>South wind to around 14 mph [23 kph], with wind gusts to near 20 mph [32 kph].</div> 
+            <div>The dewpoint will be near 68°F [20°C] with a humidity of 71% and</div>
+            <div>a barometric pressure around 29.97 in [1015 mb].</div>
+            <div>Chance of precipitation is 17% with a qpf of 0.00 in [0.1 mm].</div>
+          </p>
+        </div>
+      </div>
+      <div class="vr" style="height:540px; max-width:none;"></div>
+      <div class="col-7">
+        <h1 class="heading">
+          <div class="heading-one">National</div>
+          <div class="heading-two">Weather</div>
+        </h1>
+        <h2 class="city-name-mini" id="city-name-mini"></h2>
+          <p class="date-time" id="date"></p>
+          <div class="weather-status">
+            <p id="weather-description"></p>
+          </div>
+          <div class="details-link">
+            <a href="https://www.weathercrave.com/weather-forecast-kenya/city-779/weather-forecast-mombasa-today" target="_blank"><button class="see-more">See Details</button></a>
+            <br/>
+            <small>👆Forecast, with current conditions, wind, air quality, and what to expect for the next 3 days.</small>
+            <br/>
+          </div>
+          <div class="row temp-section">
+            <div class="col temp">
+              <div class="days">Tuesday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">28&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Wednesday</div>
+              <div class="emoji">
+                ⛅
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Thursday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Friday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Saturday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Sunday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+            <div class="col temp">
+              <div class="days">Monday</div>
+              <div class="emoji">
+                🌧
+              </div>
+              <div class="temp-val">27&deg;C</div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <script src="script/weather.js"></script>
+</body>
+</html>

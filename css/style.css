@@ -1,0 +1,219 @@
+h2{
+  position: relative;
+  right:-550px;
+  font-size: 20px;
+}
+h3{
+  position:relative;
+  bottom:-60px;
+}
+h5{
+  position: relative;
+  bottom:-60px;
+}
+body{
+  display: block;
+  margin: 10px auto;
+  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+button{
+  border-radius: 40px;
+  border: 1px solid hsl(251, 100%, 84%);
+  background-color: #231d3c;
+  color:#fff;
+  font-size: 12px;
+  line-height: 18px;
+  margin:2px;
+  padding: 10px 18px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+button:hover{
+  cursor: pointer;
+  background-color: rgb(68, 99, 134);
+  border: 1px solid rgb(68, 99, 134);
+  color: #fff;
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+.container{
+  display: block;
+  margin:20px auto;
+  padding:15px;
+  background:linear-gradient(180.3deg, rgb(184, 183, 183) 5.5%, rgb(76, 95, 112) 90.2%);
+  border: 2px solid #baabff;
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: 200ms ease-in-out;
+}
+.container:hover{
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 1;
+}
+.heading-one{
+  font-size: 27px;
+}
+.heading-two{
+  font-size: 50px;
+}
+.search-btn{
+  border-radius: 40px;
+  border: 1px solid hsl(251, 100%, 84%);
+  background-color:#231d3c;
+  color:#fff;
+  font-size: 12px;
+  line-height: 18px;
+  margin:2px;
+  padding: 10px 18px;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.search-btn:hover{
+  cursor: pointer;
+  background-color: rgb(68, 99, 134);
+  border: 1px solid rgb(68, 99, 134);
+  color: #fff;
+  opacity: 0.9;
+  transform: scale(1.1);
+}
+.search-bar{
+  display: flex;
+  border-radius: 60px;
+  width: fit-content;
+  border: 1px solid #231d3c;
+}
+.search-bar #search{
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  background:none;
+  text-align: left;
+  font-style: italic;
+  color: #231d3c;
+}
+::placeholder{
+  color:#231d3c;
+}
+.date-time{
+  position: relative;
+  top: -5px;
+  right:-450px;
+  font-style: italic;
+}
+.weather-status{
+  position: relative;
+  top:-10px;
+  right:-150px;
+  font-size: 30px;
+}
+.emoji-main{
+  position: relative;
+  bottom: -40px;
+  font-size:45px;
+}
+.emoji{
+  font-size: 25px;
+}
+.details-link{
+  position: relative;
+  bottom: -80px;
+}
+.city-name-mini{
+  left: 570px;
+}
+#weather-description{
+  position: relative;
+  left: 300px;
+  font-size: 32px;
+  font-family:Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+.weather-info-specific{
+  position: relative;
+  bottom: -20px;
+  font-size:10px;
+}
+.days{
+  font-style: italic;
+  font-weight: 500;
+}
+.temp-value-main{
+  font-size: 80px;
+}
+.degrees{
+  position: relative;
+  top:-90px;
+  left:90px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.temp-section{
+  text-align: center;
+  position: relative;
+  bottom:-100px;
+  font-size: 18px;
+}
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.background{
+  width: 10000px;
+  height: 100%;
+  background: transparent
+    url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/457/original/black_sky.png?1689170749")repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+
+  -moz-animation: move-background 150s linear infinite;
+  -ms-animation: move-background 150s linear infinite;
+  -o-animation: move-background 150s linear infinite;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
