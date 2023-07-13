@@ -40,22 +40,6 @@ function formatDate() {
 }
 formatDate();
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitConvert = document.querySelector("#temp-main");
-  let tempValue = fahrenheitConvert.innerHTML;
-  fahrenheitConvert.innerHTML = Math.round((tempValue * 9)/5 + 32);
-};
-let tempToFahrenheit = document.querySelector("#fahrenheit");
-tempToFahrenheit.addEventListener("click", convertToFahrenheit);
-
-function convertToCelcius(event) {
-  event.preventDefault();
-  let celciusConvert = document.querySelector("#temp-main");
-  celciusConvert.innerHTML = 27;
-}
-let tempToCelcius = document.querySelector("#celcius");
-tempToCelcius.addEventListener("click", convertToCelcius);
 
 
 function search(city){
@@ -81,7 +65,8 @@ function showCurrentWeather(response){
   let cityNameMini = document.querySelector("#city-name-mini");
   cityNameMini.innerHTML = response.data.name;
 
-  let temperature = Math.round(response.data.main.temp);
+  celsiusValue = response.data.main.temp;
+  let temperature = Math.round(celsiusValue);
   let temp = document.querySelector("#temp-main");
   temp.innerHTML = `${temperature}`;
   
@@ -122,3 +107,27 @@ function currentLocation(event){
 }
 let current = document.querySelector("#current-weather-btn");
 current.addEventListener("click", currentLocation);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+  let temperatureConvert = document.querySelector("#temp-main");
+  let fahrenheitValue = Math.round((celsiusValue * 9)/5 + 32);
+  temperatureConvert.innerHTML = fahrenheitValue;
+}
+let tempToFahrenheit = document.querySelector("#fahrenheit");
+tempToFahrenheit.addEventListener("click", convertToFahrenheit);
+
+let celsiusValue = null;
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+  let temperatureConvert = document.querySelector("#temp-main");
+  temperatureConvert.innerHTML = Math.round(celsiusValue);
+}
+
+let tempToCelsius = document.querySelector("#celsius");
+tempToCelsius.addEventListener("click", convertToCelsius);
