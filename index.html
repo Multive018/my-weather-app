@@ -21,25 +21,20 @@
           <input type="submit" value="Search" class="search-btn"/>
           <button type="button" id="current-weather-btn">Current</button>
         </form>
+        <div class="current-day">Today</div>
         <div>
-          <div class="temp-value-main" id="temp-main"></div>
-        <small class="degrees" id="degree-fahrenheit">
-          <a href="#" style="text-decoration: none;" id="celsius" class="active">&deg;C</a> |
-          <a href="#" style="text-decoration: none;" id="fahrenheit">&deg;F</a>
-        </small>
+          <img src="" alt="" class="icon" id="icon">
+          <span class="temp-value-main" id="temp-main"></span>
+            <small class="degrees" id="degree-fahrenheit">
+              <a href="#" style="text-decoration: none;" id="celsius" class="active">&deg;C</a> |
+              <a href="#" style="text-decoration: none;" id="fahrenheit">&deg;F</a>
+            </small>
+          </span>
         </div>
         <small class="weather-info">
           <div>
             Feels like:
             <span id="feels-like"></span>
-            <span>&deg;C</span>
-            <br>
-            Min Temp:
-            <span id="low"></span>
-            <span>&deg;C</span>
-            <br>
-            Max Temp:
-            <span id="high"></span>
             <span>&deg;C</span>
             <br>
             Humidity:
@@ -52,10 +47,6 @@
           </div>
         </small>
         <h3 id="city-name"></h3>
-        <h5>Tonight</h5>
-        <div class="emoji-main">
-          🌧
-        </div>
         <div class="weather-info-specific">
           <p>
             <div>Mostly Clear with Light Rain Showers with a low around 72°F [22°C].</div>
@@ -72,63 +63,63 @@
           <div class="heading-one">National</div>
           <div class="heading-two">Weather</div>
         </h1>
-        <h2 class="city-name-mini" id="city-name-mini"></h2>
-          <p class="date-time" id="date"></p>
-          <div class="weather-status">
-            <p id="weather-description"></p>
+        <ul>
+          <li class="city-name-mini" id="city-name-mini"></li>
+          <li class="date-time" id="date"></li>
+          <li class="weather-status" id="weather-description"></li>
+        </ul>
+        <div class="details-link">
+          <a href="https://www.weathercrave.com/weather-forecast-kenya/city-779/weather-forecast-mombasa-today" target="_blank"><button class="see-more">See Details</button></a>
+          <br/>
+          <small>👆Forecast, with current conditions, wind, air quality, and what to expect for the next 3 days.</small>
+           <br/>
+        </div>
+      <div class="row temp-section">
+        <div class="col temp">
+          <div class="days">Tuesday</div>
+          <div class="emoji">
+                🌧
           </div>
-          <div class="details-link">
-            <a href="https://www.weathercrave.com/weather-forecast-kenya/city-779/weather-forecast-mombasa-today" target="_blank"><button class="see-more">See Details</button></a>
-            <br/>
-            <small>👆Forecast, with current conditions, wind, air quality, and what to expect for the next 3 days.</small>
-            <br/>
+          <div class="temp-val">28&deg;C</div>
+        </div>
+        <div class="col temp">
+          <div class="days">Wednesday</div>
+          <div class="emoji">
+            ⛅
           </div>
-          <div class="row temp-section">
-            <div class="col temp">
-              <div class="days">Tuesday</div>
-              <div class="emoji">
-                🌧
-              </div>
-              <div class="temp-val">28&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Wednesday</div>
-              <div class="emoji">
-                ⛅
-              </div>
-              <div class="temp-val">27&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Thursday</div>
-              <div class="emoji">
-                🌧
-              </div>
-              <div class="temp-val">27&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Friday</div>
-              <div class="emoji">
-                🌧
-              </div>
-              <div class="temp-val">27&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Saturday</div>
-              <div class="emoji">
-                🌧
-              </div>
-              <div class="temp-val">27&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Sunday</div>
-              <div class="emoji">
-                🌧
-              </div>
-              <div class="temp-val">27&deg;C</div>
-            </div>
-            <div class="col temp">
-              <div class="days">Monday</div>
-              <div class="emoji">
+          <div class="temp-val">27&deg;C</div>
+        </div>
+        <div class="col temp">
+          <div class="days">Thursday</div>
+          <div class="emoji">
+            🌧
+          </div>
+          <div class="temp-val">27&deg;C</div>
+        </div>
+        <div class="col temp">
+          <div class="days">Friday</div>
+          <div class="emoji">
+            🌧
+          </div>
+          <div class="temp-val">27&deg;C</div>
+        </div>
+        <div class="col temp">
+          <div class="days">Saturday</div>
+          <div class="emoji">
+            🌧
+          </div>
+          <div class="temp-val">27&deg;C</div>
+        </div>
+        <div class="col temp">
+          <div class="days">Sunday</div>
+          <div class="emoji">
+            🌧
+          </div>
+          <div class="temp-val">27&deg;C</div>
+        </div>
+        <div class="col temp">
+        <div class="days">Monday</div>
+        <div class="emoji">
                 🌧
               </div>
               <div class="temp-val">27&deg;C</div>

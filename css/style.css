@@ -16,6 +16,13 @@ body{
   margin: 10px auto;
   background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
 }
+ul{
+ position: relative;
+ left: 450px;
+}
+ul li{
+  list-style: none;
+}
 button{
   border-radius: 40px;
   border: 1px solid hsl(251, 100%, 84%);
@@ -35,6 +42,12 @@ button:hover{
   color: #fff;
   opacity: 0.9;
   transform: scale(1.1);
+}
+.current-day{
+  position: relative;
+  top:20px;
+  font-size: 40px;
+  font-weight: 500;
 }
 .container{
   display: block;
@@ -101,36 +114,18 @@ button:hover{
   color:#231d3c;
 }
 .date-time{
-  position: relative;
-  top: -5px;
-  right:-450px;
   font-style: italic;
 }
-.weather-status{
+.icon{
   position: relative;
-  top:-10px;
-  right:-150px;
-  font-size: 30px;
-}
-.emoji-main{
-  position: relative;
-  bottom: -40px;
-  font-size:45px;
-}
-.emoji{
-  font-size: 25px;
+  top: -25px;
 }
 .details-link{
   position: relative;
   bottom: -80px;
 }
-.city-name-mini{
-  left: 570px;
-}
 #weather-description{
-  position: relative;
-  left: 300px;
-  font-size: 32px;
+  font-size: 30px;
   font-family:Arial, Helvetica, sans-serif;
 }
 #weather-description:first-letter{
@@ -138,7 +133,7 @@ button:hover{
 }
 .weather-info-specific{
   position: relative;
-  bottom: -20px;
+  bottom: -50px;
   font-size:10px;
 }
 .days{
@@ -150,8 +145,8 @@ button:hover{
 }
 .degrees{
   position: relative;
-  top:-90px;
-  left:90px;
+  top:-43px;
+  left:-5px;
   font-size: 20px;
   font-weight: 500;
 }

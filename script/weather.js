@@ -36,15 +36,15 @@ function formatDate() {
   let year = now.getFullYear();
 
   let currentDate = document.querySelector("#date");
-  currentDate.innerHTML = `🌧${day}, ${month} ${date}, ${year} | ${hours}:${minutes}`;
+  currentDate.innerHTML = `${day}, ${month} ${date}, ${year} | ${hours}:${minutes}`;
 }
 formatDate();
 
 
 
 function search(city){
-  let apiKey = "1dbf926d3b4417bf379db7043bec1047";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  let apiKey = "c1d064fec08a911563t0obf723ba0dee";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentWeather);
 }
 search("Mombasa");
@@ -59,30 +59,23 @@ form.addEventListener("submit", loadCity);
 
 //current temperature
 function showCurrentWeather(response){
+  console.log(response.data);
   let cityName = document.querySelector("#city-name");
-  cityName.innerHTML = response.data.name;
+  cityName.innerHTML = response.data.city;
 
   let cityNameMini = document.querySelector("#city-name-mini");
-  cityNameMini.innerHTML = response.data.name;
+  cityNameMini.innerHTML = response.data.city;
 
-  celsiusValue = response.data.main.temp;
+  celsiusValue = response.data.temperature.current;
   let temperature = Math.round(celsiusValue);
   let temp = document.querySelector("#temp-main");
   temp.innerHTML = `${temperature}`;
   
-  let tempLow = Math.round(response.data.main.temp_min);
-  let low = document.querySelector("#low");
-  low.innerHTML = `${tempLow}`;
-
-  let tempHigh = Math.round(response.data.main.temp_max);
-  let high = document.querySelector("#high");
-  high.innerHTML = `${tempHigh}`;
-
-  let humidityValue = Math.round(response.data.main.humidity);
+  let humidityValue = Math.round(response.data.temperature.humidity);
   let humidity = document.querySelector("#humidity-value");
   humidity.innerHTML = `${humidityValue}`;
   
-  let feelsLikeValue  = Math.round(response.data.main.feels_like);
+  let feelsLikeValue  = Math.round(response.data.temperature.feels_like);
   let feelsLike = document.querySelector("#feels-like");
   feelsLike.innerHTML = `${feelsLikeValue}`;
   
@@ -91,14 +84,18 @@ function showCurrentWeather(response){
   wind.innerHTML = `${windValue}`;
 
   let weatherDescription = document.querySelector("#weather-description");
-  weatherDescription.innerHTML = response.data.weather[0].description;
+  weatherDescription.innerHTML = response.data.condition.description;
+
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src", response.data.condition.icon_url);
+  icon.setAttribute("alt", response.data.condition.description);
 }
 
 function showLocation(position){
-  let apiKey = "1dbf926d3b4417bf379db7043bec1047";
-  let lat = position.coords.latitude;
+  let apiKey = "c1d064fec08a911563t0obf723ba0dee";
   let long = position.coords.longitude;
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=${apiKey}`;
+  let lat = position.coords.latitude;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${long}&lat=${lat}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentWeather);
 }
 function currentLocation(event){
