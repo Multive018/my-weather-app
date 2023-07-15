@@ -66,10 +66,12 @@ button:hover{
   opacity: 1;
 }
 .heading-one{
-  font-size: 27px;
+  margin-bottom: 0px;
+  font-size: 30px;
 }
 .heading-two{
-  font-size: 50px;
+  margin-top: 0px;
+  font-size: 55px;
 }
 .active{
   color: #09203f;
@@ -122,7 +124,11 @@ button:hover{
 }
 .details-link{
   position: relative;
-  bottom: -80px;
+  bottom: -100px;
+}
+.country{
+  font-size: 22px;
+  font-weight: 500;
 }
 #weather-description{
   font-size: 30px;
@@ -133,12 +139,8 @@ button:hover{
 }
 .weather-info-specific{
   position: relative;
-  bottom: -50px;
-  font-size:10px;
-}
-.days{
-  font-style: italic;
-  font-weight: 500;
+  top: 60px;
+  font-size: 14px;
 }
 .temp-value-main{
   font-size: 80px;
@@ -150,11 +152,22 @@ button:hover{
   font-size: 20px;
   font-weight: 500;
 }
-.temp-section{
+.weather-forecast{
+  margin-top: 140px;
+  margin-bottom: 30px;
+  font-style: italic;
   text-align: center;
-  position: relative;
-  bottom:-100px;
-  font-size: 18px;
+  color: #000;
+  font-size: 16px;
+}
+.forecast-day{
+  font-weight: 500;
+}
+.forecast-temp{
+  font-size: 13px;
+}
+.temp-min{
+  opacity: 0.6;
 }
 @keyframes move-background {
   from {

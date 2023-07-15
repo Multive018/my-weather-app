@@ -40,7 +40,51 @@ function formatDate() {
 }
 formatDate();
 
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+  return days[day];
+}
 
+function displayWeatherForecast(response){
+  let forecastData = response.data.daily;
+  let forecastElement = document.querySelector("#weather-forecast");
+  let forecastValue = `<div class="row">`;
+  forecastData.forEach( function(forecastDay){
+    forecastValue =
+    forecastValue +
+        `<div class="col">
+                  <div class="forecast-day">${formatDay(forecastDay.time)}</div>
+                  <img src="${forecastDay.condition.icon_url}" alt="${forecastDay.condition.description}" width="42" id="forecast-icon">
+                  <div class="forecast-temp">
+                    <span  class="temp-max">${Math.round(
+                      forecastDay.temperature.maximum
+                    )}&deg;</span>
+                    <span class="temp-min">${Math.round(
+                      forecastDay.temperature.minimum
+                    )}&deg;</span>
+                  </div>
+                </div>`;
+              }
+            );
+forecastValue = forecastValue + `</div>`;
+forecastElement.innerHTML = forecastValue;
+}
+
+function forecast(coordinates){
+  let apiKey = "c1d064fec08a911563t0obf723ba0dee";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}`;
+  axios.get(apiUrl).then(displayWeatherForecast);
+}
 
 function search(city){
   let apiKey = "c1d064fec08a911563t0obf723ba0dee";
@@ -54,14 +98,16 @@ function loadCity(event) {
     let city= document.querySelector("#search").value;
     search(city);
   }
-let form = document.querySelector("#search-form");
+  let form = document.querySelector("#search-form");
 form.addEventListener("submit", loadCity);
 
 //current temperature
 function showCurrentWeather(response){
-  console.log(response.data);
   let cityName = document.querySelector("#city-name");
   cityName.innerHTML = response.data.city;
+
+  let country = document.querySelector("#country");
+  country.innerHTML = response.data.country;
 
   let cityNameMini = document.querySelector("#city-name-mini");
   cityNameMini.innerHTML = response.data.city;
@@ -83,12 +129,31 @@ function showCurrentWeather(response){
   let wind = document.querySelector("#wind-value");
   wind.innerHTML = `${windValue}`;
 
+  let windSpeedValue = Math.round(response.data.wind.speed);
+  let windSpeed = document.querySelector("#wind-speed");
+  windSpeed.innerHTML = `${windSpeedValue}`;
+
+  let windDirectionValue = Math.round(response.data.wind.degree);
+  let windDirection = document.querySelector("#wind-direction");
+  windDirection.innerHTML = `${windDirectionValue}`;
+
+  let pressureValue = Math.round(response.data.temperature.pressure);
+  let pressure = document.querySelector("#pressure");
+  pressure.innerHTML = `${pressureValue}`;
+
   let weatherDescription = document.querySelector("#weather-description");
   weatherDescription.innerHTML = response.data.condition.description;
 
+  let weatherInfo = document.querySelector("#description");
+  weatherInfo.innerHTML = response.data.condition.description;
+
+
+  
   let icon = document.querySelector("#icon");
   icon.setAttribute("src", response.data.condition.icon_url);
   icon.setAttribute("alt", response.data.condition.description);
+
+  forecast(response.data.coordinates);
 }
 
 function showLocation(position){
