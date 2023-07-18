@@ -1,13 +1,13 @@
 let now = new Date();
 function formatDate() {
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday"
+    "Saturday"
   ];
   let day = days[now.getDay()];
   let months = [
@@ -44,13 +44,13 @@ function formatDay(timestamp){
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
-    "Saturday",
-    "Sunday",
+    "Saturday"
   ];
   return days[day];
 }
