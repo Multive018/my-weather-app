@@ -18,7 +18,7 @@ body{
 }
 ul{
  position: relative;
- left: 450px;
+ left: 500px;
 }
 ul li{
   list-style: none;
@@ -49,9 +49,10 @@ button:hover{
   font-size: 40px;
   font-weight: 500;
 }
-.container{
+.container-fluid{
+  max-width: 1200px;
   display: block;
-  margin:20px auto;
+  margin:50px auto;
   padding:15px;
   background:linear-gradient(180.3deg, rgb(184, 183, 183) 5.5%, rgb(76, 95, 112) 90.2%);
   border: 2px solid #baabff;
@@ -59,7 +60,7 @@ button:hover{
   opacity: 0.7;
   transition: 200ms ease-in-out;
 }
-.container:hover{
+.container-fluid:hover{
   -webkit-transform: scale(0.8);
   -ms-transform: scale(0.8);
   transform: scale(0.8);
@@ -125,6 +126,7 @@ button:hover{
 .details-link{
   position: relative;
   bottom: -100px;
+  left: 10px;
 }
 .country{
   font-size: 22px;
@@ -229,4 +231,50 @@ button:hover{
   -o-animation: move-background 150s linear infinite;
   -webkit-animation: move-background 150s linear infinite;
   animation: move-background 150s linear infinite;
+}
+
+@media (max-width: 900px){
+  .temp-value-main{
+    font-size: 60px;
+    position: relative;
+    left: -13px;
+    top: 30px;
+  }
+  .current-day{
+    font-size: 36px;
+  }
+  .weather-data{
+    position: relative;
+    left: -350px;
+    top: 50px;
+  }
+  .icon{
+  position: relative;
+  top: 10px;
+  left: -10px;
+}
+.heading{
+  position: relative;
+  left: 100px;
+  text-align: center;
+ }
+ .celsius{
+  font-size: 16px;
+  position: relative;
+  left: -10px;
+  top: 42px;
+ }
+ .fahrenheit{
+  font-size: 16px;
+  position: relative;
+  right: -150px;
+  top: -27px;
+  left: 185px;
+ }
+ .slash{
+  display: none;
+ }
+ .vr{
+  visibility: hidden;
+ }
 }
