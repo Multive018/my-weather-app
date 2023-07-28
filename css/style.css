@@ -284,15 +284,15 @@ button:hover{
   visibility: hidden;
  }
  .search-bar{
-  width: 200px;
+  width: 185px;
  }
  .search-btn{
   position: relative;
-  left: 10px;
+  left: -25px;
   }
   .current-weather-btn{
     position: relative;
-    left: 10px;
+    left: -25px;
   }
   .weather-info{
     position: relative;
