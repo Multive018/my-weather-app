@@ -233,43 +233,53 @@ button:hover{
   animation: move-background 150s linear infinite;
 }
 
-@media (max-width: 900px){
+@media (max-width: 800px){
   .temp-value-main{
     font-size: 60px;
     position: relative;
-    left: -13px;
-    top: 30px;
+    left: 70px;
+    top: 70px;
   }
   .current-day{
     font-size: 36px;
+    top: 170px;
   }
   .weather-data{
     position: relative;
-    left: -350px;
-    top: 50px;
+    left: -500px;
+    top: 250px;
+    text-align: right;
   }
   .icon{
   position: relative;
-  top: 10px;
-  left: -10px;
+  top: 170px;
+  left: -20px;
 }
 .heading{
   position: relative;
-  left: 100px;
+  left: -80px;
   text-align: center;
+  border: 1px solid #231d3c;
+  border-radius: 5px;
+ }
+ .heading-one{
+  font-size: 26px;
+ }
+ .heading-two{
+  font-size: 50px;
  }
  .celsius{
   font-size: 16px;
   position: relative;
-  left: -10px;
-  top: 42px;
+  left: 70px;
+  top: 80px;
  }
  .fahrenheit{
   font-size: 16px;
   position: relative;
   right: -150px;
-  top: -27px;
-  left: 185px;
+  top: 80px;
+  left: 70px;
  }
  .slash{
   display: none;
@@ -277,4 +287,31 @@ button:hover{
  .vr{
   visibility: hidden;
  }
+ .search-bar{
+  width: 200px;
+ }
+ .search-btn{
+  position: relative;
+  left: 10px;
+  }
+  .current-weather-btn{
+    position: relative;
+    left: 10px;
+  }
+  .weather-info{
+    position: relative;
+    top: 70px;
+  }
+  .form{
+    position: relative;
+    top: 140px;
+    left: 40px;
+  }
+  .wrapper{
+    position: relative;
+    bottom: -50px;
+  }
+  .details-link{
+    visibility: hidden;
+  }
 }

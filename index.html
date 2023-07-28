@@ -16,11 +16,13 @@
   <div class="container-fluid">
     <div class="row justify-content-start">
       <div class="col-4">
-        <form class="search-bar" id="search-form">
-          <input type="search" placeholder="Enter a city" id="search" autofocus="on" autocomplete="off"/>
-          <input type="submit" value="Search" class="search-btn"/>
-          <button type="button" class="current-weather-btn" id="current-weather-btn">Current</button>
-        </form>
+        <div class="form">
+          <form class="search-bar" id="search-form">
+            <input type="search" placeholder="Enter a city" id="search" autofocus="on" autocomplete="off"/>
+            <input type="submit" value="Search" class="search-btn"/>
+            <button type="button" class="current-weather-btn" id="current-weather-btn">Current</button>
+          </form>
+        </div>
         <div class="current-day">Today</div>
         <div>
           <img src="" alt="" class="icon" id="icon">
@@ -47,11 +49,13 @@
             <span>m/s</span>
           </div>
         </small>
-        <h3 id="city-name"></h3>
-        <div class="weather-info-specific" id="weather-info-specific">
-          <div class="country" id="country"></div>
-          Today the weather condition is <strong><span id="description"></span></strong> with an atmospheric pressure
-          of <strong><span id="pressure"></span>hPa</strong> with the windspeed at <strong><span id="wind-speed"></span>m/s</strong> in the <strong><span id="wind-direction"></span>&deg;</strong> wind direction.
+        <div class="wrapper">
+          <h3  class="city-name" id="city-name"></h3>
+          <div class="weather-info-specific" id="weather-info-specific">
+            <div class="country" id="country"></div>
+            Today the weather condition is <strong><span id="description"></span></strong> with an atmospheric pressure
+            of <strong><span id="pressure"></span>hPa</strong> with the windspeed at <strong><span id="wind-speed"></span>m/s</strong> in the <strong><span id="wind-direction"></span>&deg;</strong> wind direction.
+          </div>
         </div>
       </div>
       <div class="vr" style="height:600px; "></div>
