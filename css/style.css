@@ -284,15 +284,15 @@ button:hover{
   visibility: hidden;
  }
  .search-bar{
-  width: 185px;
+  width: 175px;
  }
  .search-btn{
   position: relative;
-  left: -25px;
+  left: -30px;
   }
   .current-weather-btn{
     position: relative;
-    left: -25px;
+    left: -30px;
   }
   .weather-info{
     position: relative;
@@ -301,7 +301,7 @@ button:hover{
   .form{
     position: relative;
     top: 140px;
-    left: 0px;
+    left: -5px;
   }
   .wrapper{
     position: relative;
