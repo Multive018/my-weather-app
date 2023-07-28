@@ -233,7 +233,7 @@ button:hover{
   animation: move-background 150s linear infinite;
 }
 
-@media (max-width: 800px){
+@media (max-width: 700px){
   .temp-value-main{
     font-size: 60px;
     position: relative;
@@ -305,7 +305,7 @@ button:hover{
   .form{
     position: relative;
     top: 140px;
-    left: 40px;
+    left: 20px;
   }
   .wrapper{
     position: relative;
