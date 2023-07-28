@@ -233,7 +233,7 @@ button:hover{
   animation: move-background 150s linear infinite;
 }
 
-@media (max-width: 700px){
+@media (max-width: 800px){
   .temp-value-main{
     font-size: 60px;
     position: relative;
@@ -275,11 +275,7 @@ button:hover{
   top: 80px;
  }
  .fahrenheit{
-  font-size: 16px;
-  position: relative;
-  right: -150px;
-  top: 80px;
-  left: 70px;
+  display: none;
  }
  .slash{
   display: none;
@@ -305,7 +301,7 @@ button:hover{
   .form{
     position: relative;
     top: 140px;
-    left: 20px;
+    left: 0px;
   }
   .wrapper{
     position: relative;
@@ -314,4 +310,38 @@ button:hover{
   .details-link{
     visibility: hidden;
   }
+}
+@media (width: 1024px){
+  .weather-data{
+    position: relative;
+    left: -120px;
+  }
+  .search-bar{
+  width: 185px;
+ }
+ .search-btn{
+  position: relative;
+  left: -10px;
+  }
+  .current-weather-btn{
+    position: relative;
+    left: -13px;
+  }
+}
+@media (width: 912px) {
+  .weather-data{
+    position: relative;
+    left: -180px;
+  }
+  .search-bar{
+  width: 155px;
+ }
+ .search-btn{
+  position: relative;
+  left: -40px;
+  }
+  .current-weather-btn{
+    position: relative;
+    left: -43px;
+  }  
 }
