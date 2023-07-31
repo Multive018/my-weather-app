@@ -326,4 +326,8 @@ button:hover{
   .weather-forecast{
     font-size: 12px;
   }
+  .link{
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
 }
