@@ -14,8 +14,8 @@
     <div class="background"></div>
   </div>
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-4">
+    <div class="row">
+      <div class="col-4 section-one">
         <div class="form">
           <form class="search-bar" id="search-form">
             <input type="search" placeholder="Enter a city" id="search" autofocus="on" autocomplete="off"/>
@@ -24,7 +24,7 @@
           </form>
         </div>
         <div class="current-day">Today</div>
-        <div>
+        <div class="temp">
           <img src="" alt="" class="icon" id="icon">
           <span class="temp-value-main" id="temp-main"></span>
             <small class="degrees" id="degree-fahrenheit">
@@ -34,21 +34,23 @@
             </small>
           </span>
         </div>
-        <small class="weather-info">
-          <div>
-            Feels like:
-            <span id="feels-like"></span>
-            <span>&deg;C</span>
-            <br>
-            Humidity:
-            <span id="humidity-value"></span>
-            <span>%</span>
-            <br>
-            Wind:
-            <span id="wind-value"></span>
-            <span>m/s</span>
-          </div>
-        </small>
+        <div class="weather-info">
+          <small>
+            <div>
+              Feels like:
+              <span id="feels-like"></span>
+              <span>&deg;C</span>
+              <br>
+              Humidity:
+              <span id="humidity-value"></span>
+              <span>%</span>
+              <br>
+              Wind:
+              <span id="wind-value"></span>
+              <span>m/s</span>
+            </div>
+          </small>
+        </div>
         <div class="wrapper">
           <h3  class="city-name" id="city-name"></h3>
           <div class="weather-info-specific" id="weather-info-specific">
@@ -58,8 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="vr" style="height:600px; "></div>
-      <div class="col-7">
+      <div class="col-8 section-two">
         <div class="heading">
           <span class="heading-one">National</span>
           <br>
@@ -79,8 +80,8 @@
            <br/>
         </div>
         <div class="weather-forecast" id="weather-forecast"></div>
+        <small style="font-weight:500; text-align:right;"><a href="https://github.com/Multive018/my-weather-app" target="_blank" style="color: #8e7ae7; text-decoration: none;">Open-source code</a> by Sharon Mbeneka</small>
       </div>
-      <small style="font-weight:500; color:black; text-align:right;"><a href="https://github.com/Multive018/my-weather-app" target="_blank">Open-source code</a> by Sharon Mbeneka</small>
   </div>
   <script src="script/weather.js"></script>
 </body>
